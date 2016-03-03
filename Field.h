@@ -4,6 +4,7 @@
 
 #pragma once
 
+#include <iostream>
 #include <vector>
 #include <stdint.h>
 
@@ -26,5 +27,7 @@ public:
 	bool put(Chip player, uint8_t num_line);
 
 	Chip get(uint8_t num_line, uint8_t num_depth);
+
+	void show();
 };
 

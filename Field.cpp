@@ -30,3 +30,19 @@ Chip Field::get(uint8_t num_line, uint8_t num_depth){
 	return f[num_line][num_depth];
 }
 
+void Field::show(){
+	cout << "[ 0 1 2 3 4 5 6 ]" << endl;
+	for(auto i=0; i<6; ++i){
+		cout << "| ";
+		for(auto j=0; j<7; ++j){
+			if(f[j][i] == Chip::WHITE)
+				cout << "O ";
+			else if(f[j][i] == Chip::BLACK)
+				cout << "X ";
+			else
+				cout << "  ";
+		}
+		cout << "|" << endl;
+	}
+	cout << "-----------------" << endl;
+}
