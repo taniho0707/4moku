@@ -1,0 +1,8 @@
+*\~
+main
+CMakeFiles/*
+cmake_install.cmake
+*.o
+.#*
+CMakeCache.txt
+#*
