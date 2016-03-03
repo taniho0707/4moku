@@ -19,7 +19,7 @@ void Field::clear(){
 bool Field::put(Chip player, uint8_t num_line){
 	if(f[num_line][5] != Chip::NONE) return false;
 	for(auto i=0; i<6; ++i){
-		if(f[num_line][i] != Chip::NONE){
+		if(f[num_line][i] == Chip::NONE){
 			f[num_line][i] = player;
 			return true;
 		}
@@ -32,7 +32,7 @@ Chip Field::get(uint8_t num_line, uint8_t num_depth){
 
 void Field::show(){
 	cout << "[ 0 1 2 3 4 5 6 ]" << endl;
-	for(auto i=0; i<6; ++i){
+	for(auto i=5; i>=0; --i){
 		cout << "| ";
 		for(auto j=0; j<7; ++j){
 			if(f[j][i] == Chip::WHITE)

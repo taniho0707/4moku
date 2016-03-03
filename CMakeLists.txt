@@ -9,4 +9,5 @@ add_definitions("-Wall -std=c++1y")
 add_executable(main
     main.cpp
     Field.cpp
+    Judge.cpp
 )

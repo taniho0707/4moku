@@ -5,7 +5,7 @@
 #pragma once
 
 #include <iostream>
-#include <vector>
+#include <array>
 #include <stdint.h>
 
 using namespace std;
@@ -18,7 +18,7 @@ enum class Chip : uint8_t{
 
 class Field{
 private:
-	vector<vector<Chip> > f;
+	array<array<Chip, 6>, 7> f;
 
 public:
 	Field();
